@@ -1,0 +1,4 @@
+com\rab3\controller\ProfileController.class
+com\rab3\controller\dto\ProfileDTO.class
+com\rab3\controller\AuthController.class
+com\rab3\utils\AppDBConnection.class

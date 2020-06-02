@@ -77,7 +77,7 @@ public class ProfileController {
 	@PostMapping("/register")
 	public String registerPostPage(@ModelAttribute ProfileDTO profileDTO, Model model) {
 		profileService.saveProfile(profileDTO);
-		model.addAttribute("count", profileDao.count());
+		model.addAttribute("count", profileService.count());
 		model.addAttribute("msg", "You are successfully registered!!!");
 		return "register";
 	}

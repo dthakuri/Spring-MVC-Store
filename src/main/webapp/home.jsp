@@ -22,22 +22,21 @@
 			class="img-thumbnail"> <img src="images/sleeping.png"
 			style="height: 150px;" class="img-thumbnail"> <img
 			src="images/student.png" style="height: 150px;" class="img-thumbnail">
-			<a href="profiles">
-			<img
-			src="images/group.png" style="height: 150px;" class="img-thumbnail">
-			</a>
+		<a href="profiles"> <img src="images/group.png"
+			style="height: 150px;" class="img-thumbnail">
+		</a>
 		<hr />
 		<h3>${msg}</h3>
-		<h4>Hello ! We welcome you   ${magic.name}!!!!!!!!!!!!!!!!!!!!!!!</h4>
+		<h4>Hello ! We welcome you ${magic.name}!!!!!!!!!!!!!!!!!!!!!!!</h4>
 		<h4>Email : ${magic.email}</h4>
-			<h4>Gender : ${magic.gender}</h4>
-				<h4>Role : ${magic.role}</h4>
-				<h4>Unique Id : ${magic.aid}
-				<a href="editProfile?aid=${magic.aid}">
-					<img src="images/edit.png" style="height: 24px;">
-				</a>
-				</h4>
-				
+		<h4>Gender : ${magic.gender}</h4>
+		<h4>Role : ${magic.role}</h4>
+		<h4>
+			Unique Id : ${magic.aid} <a href="editProfile?aid=${magic.aid}">
+				<img src="images/edit.png" style="height: 24px;">
+			</a>
+		</h4>
+
 		<img src="images/welcome.png" class="rounded-circle">
 		<hr />
 		<a href="login.jsp">

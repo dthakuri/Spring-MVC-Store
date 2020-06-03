@@ -19,10 +19,11 @@
 <body>
 	<header style="height: 30px; background-color: #03a9f4;"> </header>
 	<div class="container">
-		<br /> <img src="images/banner-home-middle.png" style="height: 150px;"
-			class="img-thumbnail"> <img src="images/sleeping.png"
+		<br /> <img src="images/banner-home-middle.png"
 			style="height: 150px;" class="img-thumbnail"> <img
-			src="images/student.png" style="height: 150px;" class="img-thumbnail">
+			src="images/sleeping.png" style="height: 150px;"
+			class="img-thumbnail"> <img src="images/student.png"
+			style="height: 150px;" class="img-thumbnail">
 		<hr />
 		<span style="font-size: 18px; color: red;">${msg}</span> <br />
 		<div style="width: 50%">
@@ -47,8 +48,7 @@
 
 					<div class="col-sm-4" style="background-color: #e6e6e6;">
 						<br /> <img src="${magic.photo}" class="rounded float-right"
-							style="width: 100%; height: 70%;"> <br /> <br />
-						<br />
+							style="width: 100%; height: 70%;"> <br /> <br /> <br />
 						<p style="text-align: center;">Photo</p>
 					</div>
 

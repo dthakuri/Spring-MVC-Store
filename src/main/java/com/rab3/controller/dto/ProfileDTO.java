@@ -1,4 +1,5 @@
 package com.rab3.controller.dto;
+
 import java.sql.Timestamp;
 
 public class ProfileDTO {
@@ -11,8 +12,7 @@ public class ProfileDTO {
 	private String photo;
 	private Timestamp doe;
 	private String role;
-	
-	
+
 	public String getRole() {
 		return role;
 	}
@@ -76,7 +76,6 @@ public class ProfileDTO {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
 
 	public String getPhoto() {
 		return photo;

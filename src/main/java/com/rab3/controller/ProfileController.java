@@ -14,15 +14,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rab3.controller.dto.ProfileDTO;
-import com.rab3.dao.ProfileDao;
 import com.rab3.service.ProfileService;
 
 @Controller
 public class ProfileController {
 
-	@Autowired
-	private ProfileDao profileDao;
-	
+		
 	@Autowired
 	private ProfileService profileService;
 	
@@ -71,6 +68,7 @@ public class ProfileController {
 	
 	@GetMapping("/register")
 	public String registerPage(Model model) {
+		model.addAttribute("count", profileService.count());
 		return "register";
 	}
 	

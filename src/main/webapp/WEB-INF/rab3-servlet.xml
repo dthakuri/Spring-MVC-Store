@@ -40,5 +40,6 @@
 		<property name="username" value="root" />
 		<property name="password" value="dhiraj143" />
 	</bean>
+ 	<bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
  
  </beans>

@@ -27,7 +27,7 @@
 			Profile Page</span>
 		<hr />
 		<div style="width: 50%">
-			<form action="updateProfile" method="post">
+			<form action="updateProfile" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="aid" value="${profileDTO.aid}"> <label>Username</label>
 				<input type="text" name="username" class="form-control"
 					value="${profileDTO.username}"> <label>Name</label> <input
@@ -38,9 +38,10 @@
 					name="gender" class="form-control" style="width: 50%;">
 					<option ${profileDTO.gender=='Male' ? 'selected' :''}>Male</option>
 					<option ${profileDTO.gender=='Female' ? 'selected' :''}>Female</option>
-				</select> <label>Image</label> <input type="text" name="photo"
-					class="form-control" value="${profileDTO.photo}"> <img
-					src="${profileDTO.photo}" style="height: 100px;"
+				</select> <label>Image</label> <input type="file" name="photo"
+					class="form-control" value="/imageLoader?aid=${profileDTO.aid}"> 
+						
+					<img src="imageLoader?aid=${profileDTO.aid}" style="height: 100px;"
 					class="img-thumbnail"> <br /> <br />
 				<button type="submit" class="btn btn-primary">Update</button>
 				<a href="${pageContext.request.contextPath}/auth">

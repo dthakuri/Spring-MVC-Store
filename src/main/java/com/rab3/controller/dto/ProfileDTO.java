@@ -2,6 +2,8 @@ package com.rab3.controller.dto;
 
 import java.sql.Timestamp;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class ProfileDTO {
 	private int aid;
 	private String username;
@@ -9,7 +11,7 @@ public class ProfileDTO {
 	private String name;
 	private String email;
 	private String gender;
-	private String photo;
+	private MultipartFile photo;
 	private Timestamp doe;
 	private String role;
 
@@ -77,11 +79,11 @@ public class ProfileDTO {
 		this.gender = gender;
 	}
 
-	public String getPhoto() {
+	public MultipartFile getPhoto() {
 		return photo;
 	}
 
-	public void setPhoto(String photo) {
+	public void setPhoto(MultipartFile photo) {
 		this.photo = photo;
 	}
 

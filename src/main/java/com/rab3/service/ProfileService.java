@@ -24,4 +24,6 @@ public interface ProfileService {
 
 	String deleteByusername(String username);
 
+	byte[] findPhotoById(int aid);
+
 }

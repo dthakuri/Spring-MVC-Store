@@ -1,6 +1,10 @@
 package com.rab3.controller;
 
+import java.io.IOException;
 import java.util.List;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,7 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.rab3.controller.dto.ProfileDTO;
 import com.rab3.service.ProfileService;
 
@@ -29,6 +32,31 @@ public class ProfileController {
 		return "search";
 	}
 
+	@GetMapping("/forgetPass")
+	public String forgetPass() {
+		return "forgotPassword";
+	}
+	
+	
+	
+	@GetMapping("/imageLoader")
+	public void showImage(@RequestParam int aid,
+			HttpServletResponse httpServletResponse) throws IOException {
+		byte[] photo = profileService.findPhotoById(aid);
+		//I am going to write photo into reponse
+		httpServletResponse.setContentType("image/png");
+		ServletOutputStream outputStream=httpServletResponse.getOutputStream();
+		if(photo!=null && photo.length>0) {
+			//writtng photo as a byte array into the response body
+			outputStream.write(photo);
+		}else {
+			outputStream.write(new byte[] {});
+		}
+		//go to the client
+		outputStream.flush();
+	}
+	
+	
 	@PostMapping("/forgotPassword")
 	public String forgetPasswordPage(@RequestParam String email, Model model) {
 		String passsoword = profileService.forgetPassword(email);
@@ -59,7 +87,8 @@ public class ProfileController {
 	}
 
 	@PostMapping("/register")
-	public String registerPostPage(@ModelAttribute ProfileDTO profileDTO, Model model) {
+	public String registerPostPage(@ModelAttribute ProfileDTO profileDTO, Model model) throws Exception {
+		
 		profileService.saveProfile(profileDTO);
 		model.addAttribute("count", profileService.count());
 		model.addAttribute("msg", "You are successfully registered!!!");

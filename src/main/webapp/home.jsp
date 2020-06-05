@@ -18,8 +18,13 @@
 <body>
 	<header style="height: 30px; background-color: #03a9f4;"> </header>
 	<div class="container">
-		<br /> <img src="${magic.photo}" style="height: 150px;"
-			class="img-thumbnail"> <img src="images/sleeping.png"
+		<br /> 
+		 <img src="imageLoader?aid=${magic.aid}"   style="height: 150px;"	class="img-thumbnail"> 
+			
+			
+			
+			
+			<img src="images/sleeping.png"
 			style="height: 150px;" class="img-thumbnail"> <img
 			src="images/student.png" style="height: 150px;" class="img-thumbnail">
 		<a href="profiles"> <img src="images/group.png"

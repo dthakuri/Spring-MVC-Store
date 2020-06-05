@@ -24,4 +24,6 @@ public interface ProfileDao {
 
 	String deleteByusername(String username);
 
+	byte[] findPhotoById(int aid);
+
 }

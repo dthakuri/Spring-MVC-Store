@@ -9,6 +9,12 @@
         <servlet-name>rab3</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
+          <multipart-config>
+          <location>C:\Users\thaku\OneDrive\Desktop\Rab2020</location>
+                    <max-file-size>5242880</max-file-size><!--5MB-->
+                  <max-request-size>20971520</max-request-size><!--20MB-->
+                                 <file-size-threshold>0</file-size-threshold>
+    </multipart-config>
     </servlet>
     
     <servlet-mapping>

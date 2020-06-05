@@ -16,6 +16,18 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
+	<style>
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+  height: 120px;
+}
+.zoom:hover {
+  transform: scale(2.0); /* (200% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+</style>
+
 </head>
 <body>
 	<header style="height: 30px; background-color: #03a9f4;"> </header>
@@ -39,7 +51,7 @@
 					<th>Email</th>
 					<th>Gender</th>
 					<th>Photo</th>
-					<th>Created Date</th>
+					
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -54,7 +66,10 @@
 					<td><%=dto.getName() %></td>
 					<td><%=dto.getEmail() %></td>
 					<td><%=dto.getGender() %></td>
-					<td><img src="<%=dto.getPhoto()%>" style="height: 80px;"></td>
+					 <td>
+        <img src="imageLoader?aid=<%=dto.getAid() %>"  class="zoom">  
+
+        </td>
 					<td><%=dto.getDoe() %></td>
 					<td><a href="deleteProfile?uname=<%=dto.getUsername() %>">
 							<img src="images/icons8-delete-100.png" style="height: 80px;">

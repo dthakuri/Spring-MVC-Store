@@ -68,4 +68,10 @@ public class ProfileServiceImpl implements ProfileService {
 		return result;
 	}
 
+	@Override
+	public byte[] findPhotoById(int aid) {
+		byte[] photo=profileDao.findPhotoById(aid);
+		return photo;
+	}
+
 }

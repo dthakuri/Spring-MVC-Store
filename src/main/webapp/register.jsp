@@ -26,7 +26,7 @@
 		<h1>Total Register so far : ${count}</h1>
 		<span style="font-size: 18px; color: red;">${msg}</span> <br />
 		<div style="width: 50%">
-			<form action="register" method="post">
+			<form action="register" method="post" enctype="multipart/form-data">
 				<label>Username</label> <input type="text" name="username"
 					class="form-control"> <label>Password</label> <input
 					type="password" name="password" class="form-control"> <label>Name</label>
@@ -35,8 +35,7 @@
 				<select name="gender" class="form-control" style="width: 50%;">
 					<option>Male</option>
 					<option>Female</option>
-				</select> <label>Image</label> <input type="text" name="photo"
-					class="form-control"> <br />
+				</select> <label>Image</label>  <input type="file" name="photo"  class="form-control" style="background-color: #fadbff;"> <br />
 				<button type="submit" class="btn btn-primary">Register</button>
 				<button type="reset" class="btn btn-info">Clear</button>
 				<a href="login.jsp">

@@ -47,8 +47,16 @@
 					</div>
 
 					<div class="col-sm-4" style="background-color: #e6e6e6;">
-						<br /> <img src="${magic.photo}" class="rounded float-right"
-							style="width: 100%; height: 70%;"> <br /> <br /> <br />
+						<br /> 
+						
+						
+						
+						 <img src="imageLoader?aid=${magic.aid}"  class="rounded float-right"
+							style="width: 100%; height: 70%;"> 
+							
+							
+							
+							<br /> <br /> <br />
 						<p style="text-align: center;">Photo</p>
 					</div>
 

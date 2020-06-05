@@ -1,6 +1,8 @@
 package com.rab3.controller;
 
 import com.rab3.dao.ProfileDao;
+import com.rab3.service.ProfileService;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,8 @@ public class AuthController {
 
 	@Autowired
 	private ProfileDao profileDao;
+	
+		
 
 	public AuthController() {
 		System.out.println("IN the AuthController");
